@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thumbnail page</title>
+  <style>
+   h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline overline ;
+text-align: center;
+font-size: 50px;
+   }
+
+
+div.polaroid {
+width:24.2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 10px;
+}
+
+div.container {
+  text-align: center;
+  padding: 1px 1px;
+}
+  </style>
+</head>
+<body>
+<fieldset style="border: 2px solid #000000">
+<form>
+  Background color:
+  <select name="background" onChange=(document.body.style.backgroundColor=background.options[background.selectedIndex].value)>
+    <option value="#ffffff">White</option>
+    <option value="#000000">Black</option>
+    <option value="#808080">Grey</option>
+    <option value="#F5F5DC">Beige</option>
+    <option value="#98FB98">Pale Green</option>
+    <option value="#E0FFFF">Light Cyan</option>
+    <option value="#ffcccc">Light Red</option>
+  </select>
+
+  Text color:
+  <select name="textColor" onChange=(document.body.style.color=textColor.options[textColor.selectedIndex].value)>
+    <option value="#000000">Black</option>
+    <option value="#FFFFFF" >White</option>
+    <option value="#B22222">Dark Red</option>
+    <option value="#DAA520">Gold</option>
+    <option value="#228B22">Dark Green</option>
+    <option value="#0206FF">Blue</option>
+  </select>
+</form>
+</fieldset>
+<br>
+<h1>Top 5 Highest Paid Footballers in 2021</h1>
+<br>
+<div>
+  <div class="polaroid">
+    <img src="messi.jpg" alt="Messi" height="242px" width="364px" onclick="enlargeImg()" id="img1" >
+    <div class="container">
+      <p>Lionel Messi</p>
+    </div>
+  </div>
+  <div class="polaroid">
+    <img src="ronaldo.jpg" alt="Ronaldo" height="242px" width="364px">
+    <div class="container">
+      <p>Christiano Ronaldo</p>
+    </div>
+  </div>
+  <div class="polaroid">
+    <img src="neymar.jpg" alt="Neymar" height="242px" width="364px" > <!normal size height="485px" width="728px">
+    <div class="container">
+      <p>Neymar Jr</p>
+    </div>
+  </div>
+  <div class="polaroid">
+    <img src="mbappe.jpg" alt="Mbappe" height="242px" width="364px" >
+    <div class="container">
+      <p>Kylian Mbappe</p>
+    </div>
+  </div>
+  <div class="polaroid">
+    <img src="salah.jpg" alt="Salah" height="242px" width="364px">
+    <div class="container">
+      <p>Mohamed Salah</p>
+    </div>
+  </div>
+</div>
+<script>
+   img = document.getElementById("img1");
+
+      function enlargeImg() {
+        img.style.transform = "scale(1.5)";
+        img.style.transition = "transform 0.25s ease";
+        img.style.cssFloat = "right";
+      }
+
+</script>
+</body>
+</html>
