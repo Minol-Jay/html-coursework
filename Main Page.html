@@ -1,0 +1,96 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>Main Page</title>
+			<style>
+				body {
+					  background-image:url(Main.jpg);
+					  background-size: cover;
+					  background-attachment: fixed;					  					  
+				}
+				*{
+					padding: 0;
+					margin: 0;
+					font-family: sans-serif;
+					box-sizing: border-box;
+				}
+				#container {
+							height: 100vh;
+							width: 100%;
+							position: relative;
+							top: 0;
+							left: 0;							
+				}
+
+				#container #logo {					
+									position: absolute;
+									left: 8%;
+									top: 30px;
+									font-size: 30px;
+									z-index: 997;
+									font-weight: bold;
+									color: #165397;
+				}
+				#navbar {					
+						height: 90px;
+						width: 100%;
+						position: absolute;
+						top: 0;
+						left: 0;
+						background: #fdfefe;
+						display: grid;
+						place-items: center;
+						position: fixed;
+				}
+				#navbar ul {
+							list-style: none;
+							display: flex;
+							flex-direction: row;
+				}
+				#navbar ul li {					
+								font-size: 25px;
+								margin: 0 45px;
+				}
+				#navbar ul li a {
+									text-decoration: none;
+									color: #000;
+				}
+				#navbar ul li a:hover {				
+										color: #165397;
+				}				
+				#navbar ul #login {
+									height: 50px;
+									width: 120px;
+									position: absolute;
+									top: 20px;
+									right: 7%;
+									display: grid;
+									place-items: center;
+									background: #4551AB ;
+									border-radius: 10px 20px;
+				}
+				#navbar ul #login a {				
+										color: #e9e9eb;
+				}
+				#navbar ul #login:hover {
+										background: #DF5E3C ;
+				}
+				
+			</style>
+		</head>
+		<body>
+			<div id="container">
+				<div id ="logo">SPORTS - FOOT BALL</div>
+					<div id="navbar">
+						<ul>					
+							<li><a href="#">Home</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">News</a></li>
+							<li><a href="#">Products</a></li>
+							<li id ="login"><a href="#">Login</a></li>
+						</ul>
+					</div>
+			<div>	
+		</body>
+	</html>
