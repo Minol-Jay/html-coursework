@@ -12,16 +12,121 @@ font-size: 50px;
    }
 
 
-div.polaroid {
-width:24.2%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 10px;
+.column {
+  float: left;
+  width: 16%;
+  padding: 1px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  margin-right: 58px;
 }
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column img {
+	-webkit-filter: sepia(100%);
+	filter: sepia(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.column:hover img {
+	-webkit-filter: sepia(0);
+	filter: sepia(0);
+}
+
 
 div.container {
   text-align: center;
-  padding: 1px 1px;
+  padding: 5px 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+
+  #Span_1 {
+  font-family: sans-serif;
+  font-size: 35px;
+  text-align:justify;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  }
+
+  #Span_3 {
+  font-family: sans-serif;
+  font-size: 35px;
+  text-align:justify;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  }
+
+  #Span_2 {
+  font-family: sans-serif;
+  font-size: 35px;
+  text-align:justify;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  }
+
+   #Span_4 {
+  font-family: sans-serif;
+  font-size: 35px;
+  text-align:justify;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  }
+
+   #Span_5 {
+  font-family: sans-serif;
+  font-size: 35px;
+  text-align:justify;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  }
+
+  #MessiImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+  #NeymarImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+    #RonaldoImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+    #MbappeImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+    #SalahImage{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
   </style>
 </head>
 <body>
@@ -52,46 +157,121 @@ div.container {
 <br>
 <h1>Top 5 Highest Paid Footballers in 2021</h1>
 <br>
-<div>
-  <div class="polaroid">
-    <img src="messi.jpg" alt="Messi" height="242px" width="364px" onclick="enlargeImg()" id="img1" >
+<div class="row">
+  <div class="column">
+    <img src="messi.jpg" id="Messi" alt="Messi" height="160px" width="242px"  OnClick="MessiText();NeymarHide();RonaldoHide();MbappeHide();SalahHide();"  >
     <div class="container">
-      <p>Lionel Messi</p>
+      <p>1. Lionel Messi<br>$126 million</p>
     </div>
   </div>
-  <div class="polaroid">
-    <img src="ronaldo.jpg" alt="Ronaldo" height="242px" width="364px">
+  <div class="column">
+    <img src="ronaldo.jpg" alt="Ronaldo" height="160px" width="242px" onclick="RonaldoText();NeymarHide();MessiHide();MbappeHide();SalahHide();">
     <div class="container">
-      <p>Christiano Ronaldo</p>
+      <p>2. Christiano Ronaldo<br>$117 million</p>
     </div>
   </div>
-  <div class="polaroid">
-    <img src="neymar.jpg" alt="Neymar" height="242px" width="364px" > <!normal size height="485px" width="728px">
+  <div class="column">
+    <img src="neymar.jpg" alt="Neymar" height="160px" width="242px" onclick="NeymarText();MessiHide();RonaldoHide();MbappeHide();SalahHide();" >
     <div class="container">
-      <p>Neymar Jr</p>
+      <p>3. Neymar Jr<br>$96 million</p>
     </div>
   </div>
-  <div class="polaroid">
-    <img src="mbappe.jpg" alt="Mbappe" height="242px" width="364px" >
+  <div class="column">
+    <img src="mbappe.jpg" alt="Mbappe" height="160px" width="242px" onclick="MbappeText();MessiHide();RonaldoHide();NeymarHide();SalahHide();" >
     <div class="container">
-      <p>Kylian Mbappe</p>
+      <p>4. Kylian Mbappe<br>$42 million</p>
     </div>
   </div>
-  <div class="polaroid">
-    <img src="salah.jpg" alt="Salah" height="242px" width="364px">
+  <div class="column">
+    <img src="salah.jpg" alt="Salah" height="160px" width="242px" onclick="SalahText();MessiHide();RonaldoHide();NeymarHide();MbappeHide();">
     <div class="container">
-      <p>Mohamed Salah</p>
+      <p>5. Mohamed Salah<br>$37 million</p>
     </div>
   </div>
 </div>
+<img id="MessiImage" src="messi.jpg" style="display: none;"/>
+<img id="NeymarImage" src="neymar.jpg" style="display: none;"/>
+<img id="RonaldoImage" src="ronaldo.jpg" style="display: none;"/>
+<img id="MbappeImage" src="mbappe.jpg" style="display: none;"/>
+<img id="SalahImage" src="salah.jpg" style="display: none;"/>
+<p id="Span_1" name="Span_1"></p>
+<p id="Span_2" name="Span_2"></p>
+<p id="Span_3" name="Span_3"></p>
+<p id="Span_4" name="Span_3"></p>
+<p id="Span_5" name="Span_3"></p>
 <script>
-   img = document.getElementById("img1");
 
-      function enlargeImg() {
-        img.style.transform = "scale(1.5)";
-        img.style.transition = "transform 0.25s ease";
-        img.style.cssFloat = "right";
-      }
+       function MessiText(){
+      var Elm = document.getElementById("Span_1");
+      var TheText = "Lionel Andrés Messi also known as Leo Messi (born 24 June 1987) is an Argentine professional footballer who plays as a forward and captains the Argentina national team. He is currently a free agent, having played all his professional career for La Liga club Barcelona, whom he captained from 2018 to 2021. Often considered the best player in the world, and regarded by many as the greatest player of all time, Messi has won a record six Ballon d'Or awards, a record six European Golden Shoes, and in 2020 was named to the Ballon d'Or Dream Team. He has spent his entire professional career with Barcelona, where he has won a club-record 34 trophies, including ten La Liga titles, seven Copa del Rey titles and four UEFA Champions Leagues. A prolific goalscorer and creative playmaker,  Messi holds the records for most goals in La Liga (474), a La Liga and European league season (50), most hat-tricks in La Liga (36) and the UEFA Champions League (8), and most assists in La Liga (192), a La Liga and European league season (21) and the Copa América (17). He has scored over 750 senior career goals for club and country, and has the most goals ever by a player for a single club.";
+      Elm.innerHTML = TheText;
+      document.getElementById("MessiImage").style.display = "block";
+}
+
+       function MessiHide(){
+      var Elm = document.getElementById("Span_1");
+      var TheText = "";
+       Elm.innerHTML = TheText;
+     document.getElementById("MessiImage").style.display = "none";
+}
+
+       function NeymarText(){
+      var Elm = document.getElementById("Span_2");
+      var Text = "Neymar came into prominence at Santos, where he made his professional debut aged 17. He helped the club win two successive Campeonato Paulista championships, a Copa do Brasil, and the 2011 Copa Libertadores; the latter being Santos' first since 1963. Neymar was twice named the South American Footballer of the Year, in 2011 and 2012, and soon relocated to Europe to join Barcelona. As part of Barcelona's attacking trio with Lionel Messi and Luis Suárez, he won the continental treble of La Liga, the Copa del Rey, and the UEFA Champions League, and finished third for the FIFA Ballon d'Or in 2015 for his performances. He then attained a domestic double in the 2015–16 season. In 2017, Neymar transferred to Paris Saint-Germain in a move worth €222 million, making him the most expensive player ever. In France, Neymar won three league titles, three Coupe de France, and two Coupe de la Ligue, which included a domestic treble and being voted Ligue 1 Player of the Year in his debut season. Neymar helped PSG attain a domestic quadruple in the 2019–20 season, and led the club to its first ever Champions League Final. ";
+      Elm.innerHTML = Text;
+      document.getElementById("NeymarImage").style.display = "block";
+}
+
+       function NeymarHide(){
+      var Elm = document.getElementById("Span_2");
+      var Text = "";
+      Elm.innerHTML = Text;
+       document.getElementById("NeymarImage").style.display = "none";
+}
+
+ function RonaldoText(){
+      var Elm = document.getElementById("Span_3");
+      var TextRon = "Cristiano Ronaldo (born 5 February 1985) is a Portuguese professional footballer who plays as a forward for Serie A club Juventus and captains the Portugal national team. Often considered the best player in the world and widely regarded as one of the greatest players of all time, Ronaldo has won five Ballon d'Or awards and four European Golden Shoes, the most by a European player. He has won 32 major trophies in his career, including seven league titles, five UEFA Champions Leagues, one UEFA European Championship, and one UEFA Nations League. Ronaldo holds the records for most international goals (109, tied with Ali Daei), most goals (134) and assists (42) in the Champions League, and most goals in the European Championship (14). He is one of the few recorded players to have made over 1,100 professional career appearances, and has scored over 780 official senior career goals for club and country. In 2018, Ronaldo signed for Juventus in a transfer worth an initial €100 million (£88 million), the most expensive transfer for an Italian club and the most expensive transfer for a player over 30 years old. He won two Serie A titles, two Supercoppa Italiana, and a Coppa Italia in his first three seasons with the club.";
+      Elm.innerHTML = TextRon;
+      document.getElementById("RonaldoImage").style.display = "block";
+}
+
+function RonaldoHide(){
+      var Elm = document.getElementById("Span_3");
+      var TextRon = "";
+        Elm.innerHTML = TextRon;
+      document.getElementById("RonaldoImage").style.display = "none";
+}
+
+
+ function MbappeText(){
+      var Elm = document.getElementById("Span_4");
+      var TextM = "Kylian Mbappé Lottin (born 20 December 1998) is a French professional footballer who plays as a forward for Ligue 1 club Paris Saint-Germain and the France national team. Mbappé began his senior career with Ligue 1 club Monaco, making his professional debut in 2015, aged 16. With them, he won a Ligue 1 title, Ligue 1 Young Player of the Year, and the Golden Boy award. In 2017, he signed for league rivals Paris Saint-Germain on an initial loan, which was made permanent in 2018 in a transfer worth €180 million plus add ons, making him both the second-most expensive player and most expensive teenager. There, Mbappé won three Ligue 1 titles, three Coupe de France titles, was named Ligue 1 Player of the Year twice, and has finished as Ligue 1 top scorer for three consecutive seasons. He is also the third-highest goalscorer in the club's history. At international level, Mbappé made his senior debut for France in 2017, at age 18. At the 2018 FIFA World Cup, Mbappé became the youngest French player to score at a World Cup, and became the second teenager, after Pelé, to score in a World Cup Final. He finished as the joint second-highest goalscorer as France won the tournament, and he received the Best Young Player and French Player of the Year awards for his performances.";
+      Elm.innerHTML = TextM;
+      document.getElementById("MbappeImage").style.display = "block";
+}
+
+function MbappeHide(){
+      var Elm = document.getElementById("Span_4");
+      var TextM = "";
+      Elm.innerHTML = TextM;
+      document.getElementById("MbappeImage").style.display = "none";
+   }
+
+
+ function SalahText(){
+      var Elm = document.getElementById("Span_5");
+      var TextS = "Mohamed Salah Hamed Mahrous Ghaly (born 15 June 1992) is an Egyptian professional footballer who plays as a forward for Premier League club Liverpool and captains the Egypt national team. Considered one of the best players in the world, he is known for his finishing, dribbling, and speed. Salah started his senior career with Egyptian club Al Mokawloon, departing shortly thereafter to join Swiss side Basel for an undisclosed fee. In Switzerland, his performances attracted Premier League side Chelsea, who signed him in 2014 for a reported fee of £11 million. However, he was used sparingly in his debut season and was allowed to leave on loan to Serie A clubs Fiorentina and Roma, with the latter eventually signing him permanently for €15 million. Following his role in helping Roma to a second-placed finish and a club record points-tally in 2017, Salah returned to the Premier League to sign for Liverpool for a then club-record fee of £36.9 million. In his second spell in England, Salah adapted his game from a natural winger to a forward, and he netted 32 goals in 36 league games in his debut season, winning the Premier League Golden Boot and breaking the Premier League scoring record for a 38-game season. In his third season at the club, he helped the team win the 2019–20 Premier League, which ended the club's 30-year league title drought.";
+      Elm.innerHTML = TextS;
+      document.getElementById("SalahImage").style.display = "block";
+}
+
+function SalahHide(){
+      var Elm = document.getElementById("Span_5");
+      var TextM = "";
+      Elm.innerHTML = TextM;
+      document.getElementById("SalahImage").style.display = "none";
+   }
 
 </script>
 </body>
